@@ -1,0 +1,16 @@
+server:
+  port: 7900
+spring:
+  application:
+    name: micro-user
+eureka:
+  server:
+    port: 8761
+  instance:
+    hostname: localhost
+  client:
+    healthcheck:
+      #只可以配置在application.yml中
+      enabled: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka

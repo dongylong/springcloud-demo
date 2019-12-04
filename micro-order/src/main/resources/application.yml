@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: micro-order
+server:
+  port: 7800
+eureka:
+  server:
+    port: 8761
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
