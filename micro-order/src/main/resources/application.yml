@@ -14,3 +14,21 @@ eureka:
   instance:
     hostname: peer1
     prefer-ip-address: true
+
+MICRO-USER:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RetryRule
+
+### Ribbon 配置
+ribbon:
+  # http建立socket超时时间,毫秒
+  ConnectTimeout: 2000
+  # http读取响应socket超时时间
+  ReadTimeout: 10000
+  # 同一台实例最大重试次数,不包括首次调用
+  MaxAutoRetries: 0
+  # 重试负载均衡其他的实例最大重试次数,不包括首次server
+  MaxAutoRetriesNextServer: 2
+  # 是否所有操作都重试，POST请求注意多次提交错误。
+  # 默认false，设定为false的话，只有get请求会重试
+  OkToRetryOnAllOperations: true

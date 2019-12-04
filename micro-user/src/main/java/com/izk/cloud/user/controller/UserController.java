@@ -38,9 +38,12 @@ public class UserController {
     @Value("${spring.application.name}")
     private String appName;
 
+    @Value("${server.port}")
+    private String serverPort;
+
     @GetMapping("/test")
     public String test() {
-        return "SUCCESS";
+        return "SUCCESS。port:"+serverPort;
     }
 
     @GetMapping("/eureka/infos")
