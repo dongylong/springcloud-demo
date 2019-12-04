@@ -7,7 +7,7 @@ eureka:
   server:
     port: 8761
   instance:
-    hostname: localhost
+    hostname: peer1
   client:
     healthcheck:
       #只可以配置在application.yml中

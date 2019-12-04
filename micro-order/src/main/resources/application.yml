@@ -12,5 +12,5 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka
   instance:
-    hostname: localhost
+    hostname: peer1
     prefer-ip-address: true

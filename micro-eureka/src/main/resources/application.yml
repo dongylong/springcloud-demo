@@ -1,18 +1,16 @@
+application:
+  name: eureka-ha
+
 server:
-  port: 8761
-spring:
-  application:
-    name: microe-ureka
-  security:
-    user:
-      name: izk
-      password: izk
+  port: 8763
 eureka:
+  server:
+    enable-self-preservation: false
   instance:
-    hostname: localhost
+    eviction-interval-timer-in-ms: 1
+    hostname: peer3
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka
-
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
