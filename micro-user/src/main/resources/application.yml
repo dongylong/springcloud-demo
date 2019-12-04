@@ -8,6 +8,9 @@ eureka:
     port: 8761
   instance:
     hostname: peer1
+    metadata-map:
+      company: izk
+      localtion: bj
   client:
     healthcheck:
       #只可以配置在application.yml中
