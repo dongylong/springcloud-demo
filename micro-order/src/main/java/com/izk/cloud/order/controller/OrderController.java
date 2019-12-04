@@ -22,7 +22,7 @@ public class OrderController {
     @Resource
     private RestTemplate restTemplate;
 
-    private static final String USER_URL_TEST  = "http://localhost:7900/user/test";
+    private static final String USER_URL_TEST  = "http://micro-user/user/test";
     @GetMapping("/user/test")
     public Object testUser() {
         return restTemplate.getForObject(USER_URL_TEST,String.class);
