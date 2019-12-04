@@ -1,0 +1,18 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: microe-ureka
+  security:
+    user:
+      name: izk
+      password: izk
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka
+

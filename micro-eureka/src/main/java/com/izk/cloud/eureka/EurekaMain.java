@@ -17,10 +17,11 @@ import java.lang.invoke.MethodHandles;
  * @created 2019/12/3 16:07
  * @changeRecord
  */
-@SpringBootApplication
+@SpringBootApplication //(exclude = {SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class})
 @EnableEurekaServer
 public class EurekaMain {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+
     public static void main(String[] args) {
         SpringApplication.run(MethodHandles.lookup().lookupClass(), args);
     }
