@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import java.lang.invoke.MethodHandles;
 
@@ -17,8 +19,10 @@ import java.lang.invoke.MethodHandles;
  * @created 2019/12/3 17:14
  * @changeRecord
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.izk.cloud")
 @EnableEurekaServer
+@EnableFeignClients(basePackages = "com.izk.cloud")
+@EnableHystrix
 public class OrderMain {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     public static void main(String[] args) {

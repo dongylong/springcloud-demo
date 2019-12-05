@@ -32,3 +32,11 @@ ribbon:
   # 是否所有操作都重试，POST请求注意多次提交错误。
   # 默认false，设定为false的话，只有get请求会重试
   OkToRetryOnAllOperations: true
+feign:
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+  hystrix:
+    enabled: true

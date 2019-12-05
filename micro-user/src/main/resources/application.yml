@@ -17,3 +17,11 @@ eureka:
       enabled: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  hystrix:
+    enabled: true
