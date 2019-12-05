@@ -2,6 +2,7 @@ package com.izk.cloud.feign;
 
 import feign.Logger;
 import feign.Request;
+import feign.auth.BasicAuthRequestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -25,5 +26,10 @@ public class FeignConfiguration {
     @Bean
     public Request.Options options(){
         return new Request.Options(5000,10000);
+    }
+
+    @Bean
+    BasicAuthRequestInterceptor basicAuthRequestInterceptor(){
+        return new BasicAuthRequestInterceptor("user","password");
     }
 }

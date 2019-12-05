@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-ha
+
+server:
+  port: 8761
+eureka:
+  instance:
+    eviction-interval-timer-in-ms: 1
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:8761/eureka/,http://peer3:8762/eureka/
+
+
