@@ -12,7 +12,7 @@
         <module>micro-eureka</module>
         <module>micro-user</module>
         <module>micro-order</module>
-        <module>micro-hystrix-dashboard</module>
+        <module>micro-monitor</module>
     </modules>
 
     <properties>

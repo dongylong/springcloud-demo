@@ -1,4 +1,4 @@
-package com.izk.cloud.dashboard.config;
+package com.izk.cloud.monitor.config;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

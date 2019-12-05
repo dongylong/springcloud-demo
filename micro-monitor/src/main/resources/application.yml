@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: micro-monitor
+server:
+  port: 9001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+turbine:
+  #配置需要聚合的服务名称
+  app-config: micro-user,micro-order
+  aggregator:
+    #Turbine 需要聚合的集群名称
+    cluster-config: default
+  #集群名称表达式
+  cluster-name-expression: new String("default")
+  instanceUrlSuffix: "hystrix.stream"

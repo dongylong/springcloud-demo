@@ -1,10 +1,11 @@
-package com.izk.cloud.dashboard;
+package com.izk.cloud.monitor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 import java.lang.invoke.MethodHandles;
 
@@ -19,7 +20,8 @@ import java.lang.invoke.MethodHandles;
  */
 @EnableHystrixDashboard
 @SpringBootApplication
-public class DashBoardMain {
+@EnableTurbine
+public class MonitorMain {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     public static void main(String[] args) {
         SpringApplication.run(MethodHandles.lookup().lookupClass(), args);
