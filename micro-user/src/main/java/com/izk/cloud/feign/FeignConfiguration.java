@@ -1,4 +1,4 @@
-package com.izk.cloud.configuration;
+package com.izk.cloud.feign;
 
 import feign.Logger;
 import feign.Request;
